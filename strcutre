@@ -1,0 +1,25 @@
+/azure-cost-optimization-hybrid-architecture
+│
+├── /infra
+│   ├── main.tf                  # Terraform IaC for Cosmos, Blob, Functions
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── README.md
+│
+├── /functions
+│   ├── ArchiveBillingRecords.cs  # Timer-triggered archival
+│   ├── GetBillingRecord.cs       # Unified API (Cosmos + Blob fallback)
+│   ├── MetadataService.cs        # Metadata index service
+│   └── host.json
+│
+├── /scripts
+│   ├── deploy.ps1                # PowerShell deploy
+│   ├── deploy.sh                 # Bash deploy
+│   └── test-endpoints.ps1
+│
+├── /docs
+│   ├── architecture-diagram.png
+│   ├── migration-runbook.md
+│   └── monitoring-guide.md
+│
+└── README.md                     # High-level overview, setup, cost analysis
